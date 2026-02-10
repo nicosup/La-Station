@@ -1,3 +1,158 @@
-h2{
- color: blue;
+/* ==========================================================================
+   Configuration de base
+   ========================================================================== */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+header {
+    background: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* Style pour le bouton bleu "ACCUEIL" dans le menu */
+.nav-active {
+    background-color: #1a5a96;
+    color: #ffffff !important;
+    padding: 8px 15px;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   Hero Section (La montagne)
+   ========================================================================== */
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   Section Offres (Les 3 cartes)
+   ========================================================================== */
+.offres {
+    padding: 50px 0;
+}
+
+.offres h2 {
+    color: #1a5a96;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.grille-cartes {
+    display: flex;
+    gap: 25px;
+}
+
+.carte {
+    background: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid #1a5a96; /* La ligne bleue sous chaque carte */
+}
+
+.carte-contenu {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.carte h3 {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    color: #000000;
+}
+
+.carte p {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Boutons des cartes */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+    align-self: flex-start; /* Empêche le bouton de prendre toute la largeur */
+}
+
+.btn-gris {
+    background-color: #cccccc;
+    color: #333333;
+}
+
+.btn-bleu {
+    background-color: #1a5a96;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Bannière inférieure & Footer
+   ========================================================================== */
+.banner-basse {
+    margin-top: 50px;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 11px;
 }
