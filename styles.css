@@ -31,12 +31,24 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pousse le logo à gauche et le menu à droite */
     align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo img {
     height: 45px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #000;
 }
 
 nav ul {
@@ -55,7 +67,6 @@ nav a {
     text-transform: uppercase;
 }
 
-/* Style pour le bouton bleu "ACCUEIL" dans le menu */
 .nav-active {
     background-color: #1a5a96;
     color: #ffffff !important;
@@ -64,8 +75,12 @@ nav a {
 }
 
 /* ==========================================================================
-   Hero Section (La montagne)
+   Hero Section (Texte sur l'image)
    ========================================================================== */
+.hero {
+    position: relative; /* Indispensable pour placer le texte par-dessus */
+}
+
 .hero img {
     width: 100%;
     height: auto;
@@ -73,21 +88,27 @@ nav a {
     object-fit: cover;
 }
 
-.hero {
-    position: relative; /* Permet de positionner le texte par rapport à cette section */
-}
-
-/* Crée le rectangle sombre au centre */
-.hero-text {
+.hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6); /* Noir transparent */
+    transform: translate(-50%, -50%); /* Centre parfaitement le bloc */
+    background: rgba(0, 0, 0, 0.5); /* Rectangle sombre semi-transparent */
     color: white;
     padding: 30px 50px;
     text-align: center;
     border-radius: 5px;
+    min-width: 300px;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.hero-content p {
+    margin: 10px 0 0;
+    font-size: 16px;
 }
 
 /* ==========================================================================
@@ -101,6 +122,7 @@ nav a {
     color: #1a5a96;
     font-size: 28px;
     margin-bottom: 30px;
+    text-align: left;
 }
 
 .grille-cartes {
@@ -113,7 +135,7 @@ nav a {
     flex: 1;
     display: flex;
     flex-direction: column;
-    border-bottom: 4px solid #1a5a96; /* La ligne bleue sous chaque carte */
+    border-bottom: 4px solid #1a5a96;
 }
 
 .carte-contenu {
@@ -133,13 +155,13 @@ nav a {
     font-size: 14px;
     color: #555555;
     margin-bottom: 25px;
-    flex-grow: 1;
+    flex-grow: 1; /* Aligne les boutons en bas même si le texte est court */
 }
 
-/* Boutons des cartes */
+/* Boutons */
 .btn {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 20px;
     text-decoration: none;
     font-size: 11px;
     font-weight: bold;
@@ -162,8 +184,12 @@ nav a {
 /* ==========================================================================
    Bannière inférieure & Footer
    ========================================================================== */
-.banner-basse img{
-    margin-top: 50px;
+.banner-basse {
+    width: 100%; /* S'assure que la section prend tout l'écran */
+}
+
+.banner-basse img {
+    width: 100%; /* L'image s'étire sur toute la largeur */
     display: block;
     height: auto;
 }
@@ -172,6 +198,6 @@ footer {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    padding: 15px 0;
-    font-size: 11px;
+    padding: 20px 0;
+    font-size: 12px;
 }
