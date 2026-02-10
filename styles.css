@@ -73,6 +73,23 @@ nav a {
     object-fit: cover;
 }
 
+.hero {
+    position: relative; /* Permet de positionner le texte par rapport à cette section */
+}
+
+/* Crée le rectangle sombre au centre */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6); /* Noir transparent */
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
 /* ==========================================================================
    Section Offres (Les 3 cartes)
    ========================================================================== */
@@ -129,7 +146,7 @@ nav a {
     text-transform: uppercase;
     text-align: center;
     border-radius: 3px;
-    align-self: flex-start; /* Empêche le bouton de prendre toute la largeur */
+    align-self: flex-start; 
 }
 
 .btn-gris {
@@ -145,8 +162,10 @@ nav a {
 /* ==========================================================================
    Bannière inférieure & Footer
    ========================================================================== */
-.banner-basse {
+.banner-basse img{
     margin-top: 50px;
+    display: block;
+    height: auto;
 }
 
 footer {
